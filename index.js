@@ -4,10 +4,10 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-const questions = ([
+const questions = [
   {
     type: "input",
-    name: "Title",
+    name: "title",
     message: "What is the title of your project?",
   },
   {
@@ -55,16 +55,18 @@ const questions = ([
       "The Unlicence",
     ],
   },
-]);
+];
 
-// collect user responses 
-inquirer.prompt(questions).then(generateMarkdown);
-// console.log(data);
-// // function to write README file
-// function writeToFile(fileName, data) {}
 
-// // function to initialize program
-// function init() {}
 
-// // function call to initialize program
-// init();
+// accept user input and store
+inquirer.prompt(questions).then((data) => {
+  // console.log(data);
+  const fileName = `${data.title.toLowerCase().split(" ").join("")}.md`; // format file name
+  // console.log(fileName);
+
+  // write README file
+  fs.writeFile(fileName, JSON.stringify(data), (error) => {
+    error ? console.error(error) : console.log("readme created");
+  });
+});
