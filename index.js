@@ -4,7 +4,7 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-const questions = inquirer.prompt([
+const questions = ([
   {
     type: "input",
     name: "Title",
@@ -57,11 +57,14 @@ const questions = inquirer.prompt([
   },
 ]);
 
-// function to write README file
-function writeToFile(fileName, data) {}
+// collect user responses 
+inquirer.prompt(questions).then(generateMarkdown);
+// console.log(data);
+// // function to write README file
+// function writeToFile(fileName, data) {}
 
-// function to initialize program
-function init() {}
+// // function to initialize program
+// function init() {}
 
-// function call to initialize program
-init();
+// // function call to initialize program
+// init();
