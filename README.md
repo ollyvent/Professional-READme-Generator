@@ -33,4 +33,3 @@ Since this is a command-line application, user needs to run this application in 
 
 ## VIDEO LINK TO DEMO
 
-
