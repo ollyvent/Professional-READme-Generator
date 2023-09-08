@@ -41,6 +41,7 @@ const questions = [
     name: "Licence",
     message: "what Licence does your application use:",
     choices: [
+      "No Licence",
       "Apache Licence 2.0",
       "GNU General Public Licence v3.0",
       "MIT Licence",
