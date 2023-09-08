@@ -61,9 +61,7 @@ const questions = [
 
 // accept user input and store
 inquirer.prompt(questions).then((data) => {
-  // console.log(data);
   const fileName = `${data.title.toLowerCase().split(" ").join("")}.md`; // format file name
-  // console.log(fileName);
 
   // write README file
   fs.writeFile(fileName, JSON.stringify(data), (error) => {
