@@ -54,12 +54,12 @@ Since this is a command-line application, user needs to run this application in 
 
     GITHub: https://github.com/ollyvent/Professional-READme-Generator
 
-    
+
 
 
 ## VIDEO LINK TO DEMO 
 
-<video src="./professional_READme_generator_app .mp4" controls title="Title"></video>
+<video src="./professional_READme_generator_app.mp4" controls title="Title"></video>
 
 
     
